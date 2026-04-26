@@ -1,7 +1,7 @@
 {
     "python-envs.pythonProjects": [
         {
-            "path": "print-diamond-shape.py",
+            "path": "PythonRefresher2/print-diamond-shape.py",
             "envManager": "ms-python.python:venv",
             "packageManager": "ms-python.python:pip"
         }
