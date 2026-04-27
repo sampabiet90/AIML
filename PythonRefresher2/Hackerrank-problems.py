@@ -54,3 +54,42 @@ str = input("Enter a string : ")
 
 sp = split(str)
 print(sp)
+
+#######################################################################################
+
+# Given an integer, , perform the following conditional actions:
+
+# If  is odd, print Weird
+# If  is even and in the inclusive range of 2 to 5, print Not Weird
+# If  is even and in the inclusive range of 6 to 20, print Weird
+# If  is even and greater than 20, print Not Weird
+def printCondn(j):
+    if(j%2==0 and 2<j<5):
+        print("Not Weird")
+    if(j%2==0 and 6<j<20):
+         print(" Weird")
+    if(j%2==0 and j>20):
+         print(" Not Weird")
+    else:
+        print(" Weird")
+     
+
+i = (int)(input)("Enter and integer: ")
+
+printCondn(i)
+
+########################################################################################
+
+#Given the participants' score sheet for your University Sports Day, 
+# you are required to find the runner-up score. You are given  scores. 
+# Store them in a list and find the score of the runner-up.
+
+def findrunnerup(i):
+   i = list(map(int, i))
+   i.sort()  
+   print(i)
+   return i[-2]
+
+i = (input)("Enter scores: ").split()
+
+print(findrunnerup(i))
