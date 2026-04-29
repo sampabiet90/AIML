@@ -93,3 +93,50 @@ def findrunnerup(i):
 i = (input)("Enter scores: ").split()
 
 print(findrunnerup(i))
+
+##############################################################################################
+
+#Given an array of integers nums and an integer target, return indices of the two numbers 
+# such that they add up to target.
+#nums = [2,7,11,15], target = 9
+
+def twoSum( nums, target) :
+    my_list=[]
+    for i in range(len(nums)):
+        for j in range(i+1,len(nums)):
+            if (nums[j] + nums[i]== target):
+                my_list.extend([i,j])
+
+    return my_list
+
+
+
+
+
+nums =  list(map(int, input("Enter integers: ").split()))
+target = int(input("Enter target: "))
+print(twoSum(nums,target))
+###############################################################################
+
+# Write a function to find the longest common prefix string amongst an array of strings.
+
+# If there is no common prefix, return an empty string 
+
+#strs = ["flower","flow","flight"]
+
+def findCommon(strs):
+    my_string=""
+    strs.sort()
+    shortest_length_string= strs[0]
+    for i in range(len(shortest_length_string)):
+        first_char=shortest_length_string[i]
+        for s in strs:
+           if(s[i] != first_char):
+             return my_string
+        my_string += first_char   
+
+    return my_string
+
+
+strs= input("Enter the array: ").split()
+print(findCommon(strs))
